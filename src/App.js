@@ -9,13 +9,21 @@ function App() {
       {/* ================= NAVBAR ================= */}
 <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-20 h-18 bg-gradient-to-br from-white to-[#eef7fb] backdrop-blur-md z-50">
   {/* Logo */}
-  <div className="flex items-center">
-    <img 
-      src="/image.png"
-      alt="Logo"
-      className="h-20 w-auto object-contain contrast-150 brightness-105 saturate-140"
-    />
-  </div>
+  <div
+  className="flex items-center cursor-pointer"
+  onClick={() =>
+    document
+      .getElementById("home")
+      .scrollIntoView({ behavior: "smooth" })
+  }
+>
+  <img 
+    src="/image.png"
+    alt="Logo"
+    className="h-20 w-auto object-contain contrast-150 brightness-105 saturate-140"
+  />
+</div>
+
 
   {/* Menu */}
   <ul className="hidden md:flex gap-10 text-gray-700 font-medium">
@@ -60,46 +68,48 @@ function App() {
 </nav>
 
 {/* ================= HERO SECTION ================= */}
-<section className="min-h-screen flex items-center px-20 pt-16">
+<section 
+  id="home"
+  className="relative h-screen w-full flex items-start px-10 md:px-20 pt-24 overflow-hidden"
+>
+  <div className="flex flex-col md:flex-row items-start justify-between w-full h-full">
 
-  <div className="flex flex-col md:flex-row items-center justify-between">
+    {/* LEFT SIDE (Writing Part)  */}
+    <div className="z-10 mt-10 md:mt-20"> 
+     <h1 className="text-4xl md:text-7xl font-bold leading-tight text-gray-800">
+  Building{" "}
+  <span className="bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent whitespace-nowrap">
+  Intelligent, Sustainable
+  </span>
+  <br /> 
+  Technology Solutions
+</h1>
+<br />
 
-    {/* LEFT SIDE */}
-    <div className="max-w-6xl -mt-20">
-      <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-800">
-        Building{" "}
-        <span className="bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent">
-          Intelligent, Sustainable
-        </span>
-        <br />
-        Technology Solutions
-      </h1>
 
-      <p className="mt-8 text-lg text-gray-600 max-w-2xl">
-        NeoTech Elements delivers custom EHS, compliance, and <br />
-        enterprise software designed for modern industries and <br />
+      <p className="mt-6 text-lg text-gray-600 max-w-2xl leading-relaxed">
+        NeoTech Elements delivers custom EHS, compliance, and <br className="hidden md:block"/>
+        enterprise software designed for modern industries and <br className="hidden md:block"/>
         government partners.
       </p>
-      <br />
-      <br />
+      <br /> <br />
 
-      <button className="mt-10 bg-gradient-to-r from-blue-500 to-green-400 text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition">
+      <button className="mt-8 bg-gradient-to-r from-blue-500 to-green-400 text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition font-semibold">
         Request a Demo
       </button>
     </div>
 
-    {/* RIGHT SIDE */}
-    <div className="mt-24 md:mt-32 transform translate-y-10 -translate-x-20">
+    {/* RIGHT SIDE (Picture) */}
+    <div className="absolute right-0 bottom-0 md:relative md:mt-32 transform -translate-x-10 md:-translate-x-20 translate-y-10">
       <img
-        src="/hero.png"
+        src="/tech.png"
         alt="Preview"
-        className="w-[250px] md:w-[280px] shadow-2xl rounded-xl"
+        className="w-[700px] md:w-[900px] h-auto object-contain contrast-125 brightness-105 drop-shadow-2xl"
       />
     </div>
 
   </div>
 </section>
-
 
 
       {/* ================= WHAT WE DO SECTION ================= */}

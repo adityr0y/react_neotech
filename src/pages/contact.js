@@ -1,87 +1,134 @@
 import React from "react";
 
-function Contact() {
+export default function Contact() {
   return (
-    <section 
-    id="contact"
-    className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-400 to-purple-500 px-4">
-      
-      {/* Card */}
-      <div className="bg-white w-full max-w-2xl p-10 rounded-md shadow-xl">
-        
-        <h2 className="text-center text-2xl font-semibold mb-8">
-          Contact Us
-        </h2>
+    <section id="contact" className="bg-[#f3f4f6] py-24 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto">
 
-        <form className="space-y-5">
+        {/* ================= MAIN GRID ================= */}
+        <div className="grid lg:grid-cols-2 gap-20">
 
-          {/* Name */}
+          {/* ================= LEFT SIDE ================= */}
           <div>
-            <label className="text-xs font-semibold text-gray-600">
-              YOUR NAME *
-            </label>
-            <div className="grid grid-cols-2 gap-4 mt-2">
-              <input
-                type="text"
-                placeholder="First name"
-                 className="w-full px-3 py-2 border border-gray-400 rounded"
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Get In Touch
+            </h1>
 
-              />
-              <input
-                type="text"
-                placeholder="Last name"
-                className="border px-4 py-3 rounded-sm w-full focus:outline-none focus:ring-1 focus:ring-gray-400"
-              />
+            <p className="text-gray-600 mb-12 max-w-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+
+            {/* FORM */}
+            <form className="space-y-6">
+
+              <div>
+                <label className="block text-gray-700 mb-2 text-sm font-medium">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your Name..."
+                  className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2 text-sm font-medium">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="example@yourmail.com"
+                  className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2 text-sm font-medium">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  placeholder="Title..."
+                  className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2 text-sm font-medium">
+                  Message
+                </label>
+                <textarea
+                  rows="5"
+                  placeholder="Type Here..."
+                  className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 rounded-lg transition duration-300"
+              >
+                Send Now
+              </button>
+            </form>
+          </div>
+
+          {/* ================= RIGHT SIDE ================= */}
+          <div className="space-y-8">
+
+            {/* Phone */}
+            <div className="bg-gray-100 p-10 rounded-2xl text-center">
+              <div className="text-orange-600 text-4xl mb-6">📞</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Phone Number
+              </h3>
+              <p className="text-gray-700 font-medium">
+                207-8767-452
+              </p>
             </div>
-          </div>
 
-          {/* Email */}
-          <div>
-            <label className="text-xs font-semibold text-gray-600">
-              EMAIL ADDRESS *
-            </label>
-            <input
-              type="email"
-              placeholder="Eg. example@email.com"
-              className="border px-4 py-3 rounded-sm w-full mt-2 focus:outline-none focus:ring-1 focus:ring-gray-400"
-            />
-          </div>
+            {/* Email */}
+            <div className="bg-gray-100 p-10 rounded-2xl text-center">
+              <div className="text-orange-600 text-4xl mb-6">✉️</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Email Address
+              </h3>
+              <p className="text-gray-700 font-medium">
+                support@yoursite.com
+              </p>
+            </div>
 
-          {/* Phone */}
-          <div>
-            <label className="text-xs font-semibold text-gray-600">
-              PHONE NUMBER
-            </label>
-            <input
-              type="text"
-              placeholder="Eg. +1 800 000000"
-              className="border px-4 py-3 rounded-sm w-full mt-2 focus:outline-none focus:ring-1 focus:ring-gray-400"
-            />
-          </div>
+            {/* Location */}
+            <div className="bg-gray-100 p-10 rounded-2xl text-center">
+              <div className="text-orange-600 text-4xl mb-6">📍</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Our Location
+              </h3>
+              <p className="text-gray-700 font-medium">
+                Brooklyn
+              </p>
+            </div>
 
-          {/* Message */}
-          <div>
-            <label className="text-xs font-semibold text-gray-600">
-              MESSAGE *
-            </label>
-            <textarea
-              rows="4"
-              placeholder="Please enter your comments..."
-              className="border px-4 py-3 rounded-sm w-full mt-2 focus:outline-none focus:ring-1 focus:ring-gray-400"
-            />
           </div>
+        </div>
 
-          {/* Button */}
-          <div className="flex justify-center pt-4">
-            <button className="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-black transition flex items-center gap-2">
-              Submit →
-            </button>
+        {/* ================= MAP ================= */}
+        <div className="mt-20">
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              title="Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.315184928!2d-0.119543684229!3d51.503324979634!2m3!1f0!3f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c9f5b2a5b1%3A0x8f2d8b8e8d8e8d8e!2sLondon%20Eye!5e0!3m2!1sen!2suk!4v1690000000000!5m2!1sen!2suk"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              loading="lazy"
+            ></iframe>
           </div>
+        </div>
 
-        </form>
       </div>
     </section>
   );
 }
-
-export default Contact;
