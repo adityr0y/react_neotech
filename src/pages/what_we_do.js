@@ -1,76 +1,58 @@
-import { Settings, Database, Landmark } from "lucide-react";
+import React from "react";
 
-export default function WhatWeDo() {
+function WhatWeDo() {
   return (
-    <section
+    <div
       id="whatwedo"
-      className="py-28 bg-gradient-to-b from-white to-gray-100"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-blue-50 to-gray-100 pt-20"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 w-full">
 
-        {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-semibold text-center text-gray-900 mb-20">
-          What We Do
-        </h2>
+        {/* Heading */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            What We Do
+          </h2>
+          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+            We build intelligent, scalable and secure digital solutions
+            designed for modern businesses and government partners.
+          </p>
+        </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-16">
 
-          {/* Card 1 */}
-          <div className="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition duration-500">
-            
-            <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-blue-100 mb-6">
-              <Database className="text-blue-600" size={28} />
-            </div>
+  {/* Card 1 */}
+  <div className="bg-white p-10 rounded-7xl shadow-md hover:shadow-2xl transition duration-500 text-center">
+    
+    <h3 className="text-xl font-semibold mb-4">EHS Software</h3>
+    <p className="text-gray-600">
+      Tier II reporting, compliance automation and environmental systems.
+    </p>
+  </div>
 
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              EHS Software
-            </h3>
+  {/* Card 2 */}
+  <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-2xl transition duration-500 text-center">
+    
+    <h3 className="text-xl font-semibold mb-4">Custom Platforms</h3>
+    <p className="text-gray-600">
+      Scalable enterprise platforms engineered for performance.
+    </p>
+  </div>
 
-            <p className="text-gray-600 leading-relaxed">
-              Tier II reporting, compliance automation, and environmental
-              data systems.
-            </p>
-          </div>
+  {/* Card 3 */}
+  <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-2xl transition duration-500 text-center">
+    
+    <h3 className="text-xl font-semibold mb-4">Government Tech</h3>
+    <p className="text-gray-600">
+      Secure and compliant systems for public sector needs.
+    </p>
+  </div>
 
-
-          {/* Card 2 */}
-          <div className="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition duration-500">
-            
-            <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-cyan-100 mb-6">
-              <Settings className="text-cyan-600" size={28} />
-            </div>
-
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Custom Platforms
-            </h3>
-
-            <p className="text-gray-600 leading-relaxed">
-              Tailored enterprise solutions built for scale, security,
-              and performance.
-            </p>
-          </div>
-
-
-          {/* Card 3 */}
-          <div className="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition duration-500">
-            
-            <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-green-100 mb-6">
-              <Landmark className="text-green-600" size={28} />
-            </div>
-
-            <h3 className="text-xl font-semibold text-green-600 mb-4">
-              Government Tech
-            </h3>
-
-            <p className="text-gray-600 leading-relaxed">
-              Reliable, compliant, and secure systems for public sector needs.
-            </p>
-          </div>
-
-        </div>
+</div>
       </div>
-    </section>
+    </div>
   );
 }
 
+export default WhatWeDo;
